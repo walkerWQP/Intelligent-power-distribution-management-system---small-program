@@ -1,0 +1,60 @@
+/* pages/mine/repair/repair.wxss */
+.page{
+  padding: 0rpx 32rpx;
+}
+/* 全部设备 */
+.equipment{
+  height: 310rpx;
+  background: #FFFFFF;
+  margin-top: 25rpx;
+  border-radius: 20rpx;
+}
+.equipmentTexta{
+  margin-left: 220rpx;
+  font-family: PingFangTC-Regular;
+  font-size: 28rpx;
+  color: #333333;
+}
+.equipmentName{
+  margin-left: 32rpx;
+  padding-top: 25rpx;
+  line-height: 50rpx;
+  height: 50rpx;
+  font-size: 32rpx;
+  /* font-family: PingFangTC-Medium; */
+  color: #333333;
+}
+.equipmentElectric{
+  margin-left: 32rpx;
+  margin-top: 25rpx;
+  line-height: 50rpx;
+  height: 50rpx;
+  font-family: PingFangTC-Regular;
+  font-size: 28rpx;
+  color: #4D4D4D;
+}
+.equipmentElectricText{
+  margin-left: 60rpx;
+  height: 50rpx;
+  font-family: PingFangTC-Regular;
+  font-size: 28rpx;
+  color: #4D4D4D;
+}
+.equipmentPositionText{
+  font-family: PingFangTC-Regular;
+  font-size: 28rpx;
+  color: #4D4D4D;
+}
+.equipmentPosition{
+  margin-left: 32rpx;
+  margin-top: 25rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.nomore{
+font-family: PingFangSC-Regular;
+font-size: 30rpx;
+color: #717171;
+margin-top: 40rpx;
+text-align: center;
+}

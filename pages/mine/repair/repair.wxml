@@ -1,0 +1,45 @@
+<!--pages/equipment_device/equipment_device.wxml-->
+              <view class="weui-tab__content" >
+                <block wx:for="{{firstList}}">
+    <view class="equipment" bindtap="repair_detail" data-id='{{item.id}}' data-equipment_id='{{item.equipment_id}}' data-show_name='{{item.show_name}}'>
+ <view class="equipmentName">设备名称：
+     <text class="equipmentText">{{item.title}}</text>  
+</view>
+ <!-- <view class="equipmentName">设备类型：
+      <text class="equipmentText">{{item.type}}</text>
+</view> -->
+ <view class="equipmentName">报警参数：
+     <text class="equipmentText">{{item.show_name}}</text>
+</view>
+<view class="equipmentName">报警类型：
+     <text class="equipmentText" wx:if='{{item.type == 1}}'>单速风机箱</text>
+     <text class="equipmentText" wx:if='{{item.type == 2}}'>水泵箱</text>
+     <text class="equipmentText" wx:if='{{item.type == 3}}'>配电箱/动力柜/动力箱/商业配电箱</text>
+     <text class="equipmentText" wx:if='{{item.type == 4}}'>电梯箱</text>
+     <text class="equipmentText" wx:if='{{item.type == 5}}'>应急箱</text>
+     <text class="equipmentText" wx:if='{{item.type == 6}}'>公共照明类中的箱体/应急照明箱</text>
+     <text class="equipmentText" wx:if='{{item.type == 7}}'>冷却塔控制箱/空调箱</text>
+     <text class="equipmentText" wx:if='{{item.type == 8}}'>人防电动阀控制箱</text>
+     <text class="equipmentText" wx:if='{{item.type == 9}}'>充电桩类</text>
+     <text class="equipmentText" wx:if='{{item.type == 10}}'>公共类</text>
+     <text class="equipmentText" wx:if='{{item.type == 11}}'>住户用电箱</text>
+     <text class="equipmentText" wx:if='{{item.type == 12}}'>双速风机</text>
+     <text class="equipmentText" wx:if='{{item.type == 13}}'>单/双速风机</text>
+     <text class="equipmentText" wx:if='{{item.type == 14}}'>稳压泵</text>
+
+</view>
+ <wxs module="m1">
+        function format(ts) {
+          var d = getDate(ts)
+          return [d.getFullYear(), d.getMonth() + 1, d.getDate()].join('-') +' ' + [d.getHours(), d.getMinutes(), d.getSeconds()].join(':')
+        }
+        module.exports.format = format
+      </wxs>
+ <view class="equipmentName">记录时间：
+     <text class="equipmentText">{{m1.format(item.add_time)}}</text>
+</view>
+    </view>
+                    </block>
+                    <view wx:if="{{ nomore == 1 }}" class="nomore">没有更多了</view>
+
+                    </view>

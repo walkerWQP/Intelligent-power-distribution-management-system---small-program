@@ -1,0 +1,21 @@
+<view class='container'>
+
+<view class='topBox'>
+
+<view class='logoView'>
+<image class='logoImg' src='../../img/logo.png'></image>
+</view>
+
+<view class='textView'>
+<view class='textSty'>中原电气</view>
+</view>
+
+
+<view class='useText'>请完成微信授权继续使用</view>
+<button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class='wxBtn'>微信授权用户信息</button>
+<view wx:else>请升级微信版本</view>
+
+
+
+</view>
+</view>

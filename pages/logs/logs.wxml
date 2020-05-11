@@ -1,0 +1,28 @@
+<!--logs.wxml-->
+<view class="page">
+  <view class='logo'>
+    <image src='../../img/logos.png' class='logoImg'></image>
+  </view>
+  <view class='input'>
+    <view class="weui-cell weui-cell_input" class="inputs">
+        <input class="weui-input" auto-focus value='{{ accounts }}' bindinput='changeAccount'  placeholder='请输入您的账号'/>
+      </view>
+  </view>
+
+  <!-- <view class='input code'>
+    <input placeholder='请输入密码' bindinput='changePassword' value='{{ passwords }}'></input>
+  </view> -->
+  <view class='input code'>
+      <view class="weui-cell weui-cell_input" class="inputs">
+        <input class="weui-input" password type="text" 
+        bindinput='changePassword' value='{{ passwords }}'
+        placeholder="请输入密码" />
+      </view>
+    </view>
+
+  <view class='button'>
+    <view bindtap='login' class='text-center'>登录</view>
+  </view>
+
+</view>
+

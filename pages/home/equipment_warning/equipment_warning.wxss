@@ -1,0 +1,143 @@
+/* pages/home/equipment_warning/equipment_warning.wxss */
+.page{
+  padding: 0rpx 32rpx;
+}
+/* 报警信息 */
+.warning_top{
+  display: flex;
+  margin-top: 50rpx;
+  margin-left: 40rpx;
+}
+.warning_view{
+  width: 8rpx;
+  height: 50rpx;
+  background: #D7B870;
+}
+.warning_text{
+  margin-left: 20rpx;
+  font-family: PingFangTC-Regular;
+  font-size: 34rpx;
+  color: #333333;
+}
+/* 报警项 */
+.warning_term{
+  margin-top: 40rpx;
+  margin-left: 65rpx;
+  display: flex;
+}
+.warning_term_view{
+  font-family: PingFangTC-Regular;
+  font-size: 34rpx;
+  color: #D7B870;
+}
+.warning_term_text{
+  font-family: PingFangTC-Regular;
+  margin-left: 20rpx;
+  font-size: 34rpx;
+  color: #D7B870;
+}
+/* 设备图片 */
+.equipment_img{
+  display: flex;
+  margin-top: 40rpx;
+  margin-left: 65rpx;
+}
+.equipment_text{
+  font-family: PingFangTC-Regular;
+  font-size: 34rpx;
+  color: #333333;
+  width: 160rpx;
+}
+.equipment_imgs{
+  margin-left: 20rpx;
+  width: 200rpx;
+  height: 200rpx;
+  /* border: 1px solid sandybrown; */
+  border-radius: 10rpx;
+  /* background: white; */
+}
+/* 解决方式 */
+.solution{
+  display: flex;
+  margin-top: 40rpx;
+  margin-left: 65rpx;
+}
+.textarea-wrp{
+  /* margin-left: 20rpx; */
+  background-color: white;
+  width: 430rpx;
+  height: 400rpx;
+  border-radius: 10rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  padding: 0 10rpx;
+  color: #333333;
+}
+
+.solution_text{
+  /* font-family: PingFangTC-Regular; */
+  font-size: 34rpx;
+  color: #333333;
+  width:180rpx;
+}
+.record{
+  position: relative;
+  left: 315rpx;
+  bottom: 10rpx;
+  color: #BBBBBB;
+}
+/* 保存 */
+.bottomside{
+  width: 686rpx;
+  height: 90rpx;
+  background:#D7B870;
+  border-radius: 8rpx;
+  text-align: center;
+  font-size: 32rpx;
+  line-height: 90rpx;
+  margin-top: 40rpx;
+}
+/* 分割线 */
+.dividing_line{
+  margin-top: 40rpx;
+  height: 2rpx;
+  background: #E6E6E6;
+}
+.dividing_line1{
+  margin-top: 40rpx;
+  height: 3rpx;
+  background: #E6E6E6;
+}
+.dividing_line2{
+  margin-top: 40rpx;
+  height: 20rpx;
+  background:white;
+  
+}
+.dividing_line4{
+  margin-top: 40rpx;
+  height: 3rpx;
+  background: #E6E6E6;
+}
+.dividing_line5{
+  margin-top: 40rpx;
+  height: 3rpx;
+  background: #E6E6E6;
+}
+.dividing_line6{
+  margin-top: 40rpx;
+  height: 3rpx;
+}
+.img{
+  width: 450rpx;
+
+}
+/* .icons{
+  position: absolute;
+  left:400rpx;
+  bottom:-115rpx;
+} */
+
+
+
+

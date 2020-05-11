@@ -1,0 +1,19 @@
+<view class='container'>
+
+<view class='topBox'>
+
+<view class='logoView'>
+<image class='logoImg' src='../../img/logo.png'></image>
+</view>
+
+<view class='textView'>
+<view class='textSty'>中原电气</view>
+</view>
+
+<button class='wxBtn_log' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">微信登录</button>
+<view class='register'>
+<view class='phone_log' bindtap="goTologin">账号登录/注册</view>
+</view>
+</view>
+</view>
+

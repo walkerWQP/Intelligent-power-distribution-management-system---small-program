@@ -1,0 +1,64 @@
+<!--pages/mine/repair_details/repair_details.wxml-->
+<view class="page">
+
+  <!-- 报警标题 -->
+  <view class="warning_top">
+    <view class="warning_view"></view>
+    <view class="warning_text">报警信息</view>
+  </view>
+
+  <!-- 分割线 -->
+  <view class="dividing_line"></view>
+
+  <!-- 报警项 -->
+  <view class="warning_term">
+    <view class="warning_term_view">报警项:</view>
+    <view class="warning_term_text">{{show_name}}</view>
+  </view>
+
+  <!-- 分割线 -->
+  <view class="dividing_line1"></view>
+
+  <!-- 设备图片 -->
+  <view class="equipment_img">
+    <view class="equipment_text">设备图纸</view>
+ <block wx:for="{{equipmentImg}}">
+            <image class="equipment_imgs" src="{{ imgUrl + item }}" bindtap="previewImages" id="{{item}}"></image>
+    </block>  
+    </view>
+
+  <!-- 分割线 -->
+  <view class="dividing_line2"></view>
+
+  <!-- 报警标题 -->
+  <view class="warning_top">
+    <view class="warning_view"></view>
+    <view class="warning_text">现场记录</view>
+  </view>
+
+  <!-- 分割线 -->
+  <view class="dividing_line4"></view>
+
+  <!-- 解决方式 -->
+  <view class="solution">
+    <view class="solution_text">解决方式</view>
+    <view class="textarea-wrp">
+      {{fix_detail.fix}}
+    </view>
+  </view>
+
+  <!-- 分割线 -->
+  <view class="dividing_line5"></view>
+
+  <!-- 现场照片 -->
+  <view class="equipment_img">
+    <view class="equipment_text">现场照片</view>
+    <block wx:for="{{fix_img}}">
+            <image class="equipment_imgs" src="{{ imgUrl + item }}" bindtap="previewImage" id="{{item}}"></image>
+    </block>
+  </view>
+
+  <!-- 分割线 -->
+  <view class="dividing_line6"></view>
+  
+</view>

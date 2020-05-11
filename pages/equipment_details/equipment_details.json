@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "设备参数",
+  "usingComponents": {
+      "wux-row": "../../dist/row/index",
+      "wux-col": "../../dist/col/index",
+      "wux-cell-group": "../../dist/cell-group/index",
+      "wux-cell": "../../dist/cell/index",
+      "wux-switch": "../../dist/switch/index",
+        "wux-button": "../../dist/button/index",
+        "wux-dialog": "../../dist/dialog/index"
+  }
+}

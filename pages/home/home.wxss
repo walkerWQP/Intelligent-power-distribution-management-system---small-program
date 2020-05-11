@@ -1,0 +1,168 @@
+/* pages/home/home.wxss */
+.page{
+  padding: 0rpx 32rpx;
+}
+/* 搜索 */
+.weui-search-bar{
+  padding: 8rpx 0rpx;
+  margin-top: 10rpx;
+}
+.searchbar-result{
+    margin-top: 0;
+    font-size: 14px;
+}
+.searchbar-result:before{
+    display: none;
+}
+.weui-cell{
+    padding: 12px 15px 12px 35px;
+}
+.weui-search-bar{
+  background-color:#F8F8F8;
+  border-top: none;
+  border-bottom: none;
+}
+.weui-search-bar__cancel-btn{
+  color: #D7B870;
+}
+.weui-search-bar__label{
+  background-color:#F0F0F0;
+}
+.weui-search-bar__input{
+  background-color:#F0F0F0;
+}
+.weui-search-bar__box{
+  background-color:#F0F0F0;
+}
+.weui-cell{
+  background-color:#F8F8F8;
+}
+
+/* 导航栏 */
+.weui-navbar__slider{
+  background-color:#D7B870;
+  height: 2px;
+}
+.weui-navbar__item.weui-bar__item_on{
+  color: #D7B870;
+}
+.weui-navbar__title{
+  font-size: 14px;
+}
+
+/* 全部设备 */
+.equipment{
+  /* min-height: 300rpx; */
+  /* _height : 380rpx; */
+  background: #FFFFFF;
+  margin-top: 25rpx;
+  border-radius: 20rpx;
+  line-height: 1.0;
+  /* height :100% !important; */
+  height:auto;
+  padding-bottom: 2%;
+    word-wrap: break-word; 
+   word-break: normal; 
+}
+.equipmentTexta{
+  margin-left: 220rpx;
+  font-family: PingFangTC-Regular;
+  font-size: 28rpx;
+  color: #333333;
+}
+.equipmentText{
+  width: 400rpx;
+}
+.fixOk{
+  font-family: PingFangTC-Regular;
+}
+
+.equipmentName{
+  margin-left: 32rpx;
+  padding-top: 25rpx;
+  line-height: 50rpx;
+  height: 64rpx;
+  font-size: 32rpx;
+  font-family: PingFangTC-Medium;
+  color: #333333;
+  display: flex;
+  flex-direction: row;
+
+}
+.equipmentElectric{
+  margin-left: 32rpx;
+  margin-top: 15rpx;
+  line-height: 50rpx;
+  height: 50rpx;
+  font-family: PingFangTC-Regular;
+  font-size: 28rpx;
+  color: #4D4D4D;
+}
+.button{
+  margin-left: 20rpx;
+  margin-top: 25rpx;
+  width:200rpx;
+  line-height: 50rpx;
+  height: 50rpx;
+  font-family: PingFangTC-Regular;
+  font-size: 28rpx;
+  color: #4D4D4D;
+  background-color: #D7B870;
+}
+.bottom{
+  display: flex;
+  flex-direction: row;
+}
+.equipmentElectricText{
+  margin-left: 60rpx;
+  height: 50rpx;
+  font-family: PingFangTC-Regular;
+  font-size: 28rpx;
+  color: #4D4D4D;
+}
+.equipmentPositionText{
+  margin-left: 20rpx;
+  font-family: PingFangTC-Regular;
+  font-size: 28rpx;
+  color: #4D4D4D;
+ word-wrap: break-word; 
+   word-break: normal; 
+     height:auto;
+}
+.equipmentPosition{
+  margin-left: 32rpx;
+  margin-top: 15rpx;
+  /* height: 50rpx; */
+  line-height: 50rpx;
+  height:auto;
+  /* white-space: nowarp; */
+   word-wrap: break-word; 
+   word-break: normal; 
+
+
+
+}
+.positionImg{
+  position: relative;
+  top: 6rpx;
+  width: 30rpx;
+  height: 35rpx;
+}
+.weui-navbar__slider{
+  width: 12em;
+}
+.more {
+  width:155rpx;
+  background-color: #D7B870;
+  font-size:28rpx;
+  float:right;
+  vertical-align: middle;
+
+}
+.nomore{
+font-family: PingFangSC-Regular;
+font-size: 30rpx;
+color: #717171;
+margin-top: 40rpx;
+text-align: center;
+}

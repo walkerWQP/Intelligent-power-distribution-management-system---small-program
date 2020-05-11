@@ -1,0 +1,54 @@
+<!--pages/mine/mine.wxml-->
+<view class="page">
+  <!-- 顶部 -->
+  <view class='mineTop'>
+    <view class='headPortrait'>
+    <image class="image"></image>
+    </view>
+   
+    <view class='topPhone' bindtap='goTologin_Details' wx:if = "{{ affirm != 1}}" >请登陆</view>
+    <view class='topPhone' wx:if = "{{ affirm == 1 }}" >hello, {{nickName}}</view>
+    </view>
+    <!-- 中间部分 -->
+    <view class='middle'>
+    <!-- 我的 -->
+    <!-- <block wx:for='{{ firstList }}'> -->
+      <view class="weui-cells" bindtap='goToDetail' data-Id='{{ item.id }}'>
+        <view class="weui-cell">
+            <view class="weui-cell__bd">维修记录</view>
+            <view class="weui-cell__ft">{{fix_num}}次</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </view>
+      </view>
+    <!-- </block> -->
+    <view class="weui-cells" bindtap='to_call' data-url='{{ item.url }}'>
+        <view class="weui-cell">
+            <view class="weui-cell__bd">联系厂家</view>
+            <view class="weui-cell__ft">0371-53623516</view>
+        </view>
+      </view>
+    </view>
+    <!-- 底部 -->
+    <view class='bottomside' bindtap='showProtocal' wx:if = "{{ affirm == 1 }}">
+      退出登录
+    </view>
+     <!-- <view class='bottomside' bindtap='ceshi'>
+      订阅消息
+    </view> -->
+    <view class='back' hidden='{{ protocalHidden }}'></view>
+    <view class='modal' hidden='{{ protocalHidden }}'>
+  <view class='logout'>
+    <view class='title text-center'>退出提醒</view>
+    <view class='p'>
+    真遗憾，你确定要离开了吗？
+    </view>
+  </view>
+<view class='confirmBox'>
+<button class='btnone' bindtap='affirm'>确定</button>
+<button  class='btntwo'bindtap='hiddenModel'>取消</button>
+  </view>
+</view>
+</view>
+
+
+

@@ -1,0 +1,322 @@
+<!--pages/home/equipment_details/equipment_details.wxml-->
+<wux-dialog id="wux-dialog" />
+<wux-dialog id="wux-dialog--alert" />
+<view class="page">
+  <!-- 设备头部 -->
+  <!-- 1 运行 -->
+  <view class="equipment_details_top">
+    <view class="Frame">
+      <view class="frameText">运行状态</view>
+      <image wx:if = "{{is_online == 0}}" class="frameImg" src="../../img/tingzhi.png"></image>
+      <image wx:if = "{{is_online == 1}}" class="frameImg" src="../../img/yunxing.png"></image>
+    </view>
+     <wxs module="m1">
+        function format(ts) {
+          var d = getDate(ts)
+          return [d.getFullYear(), d.getMonth() + 1, d.getDate()].join('-') +' ' + [d.getHours(), d.getMinutes(), d.getSeconds()].join(':')
+        }
+
+        module.exports.format = format
+      </wxs>
+    <view class="Frame">
+      <view class="frameText">最后在线时间</view>
+      <view class="frameTexts">{{m1.format(last_run_time)}}</view>
+    </view>
+    <view class="Frame">
+      <view class="frameText">作业时长</view>
+      <view class="frameTexta">{{allList.runTime}}小时</view>
+     
+    </view>
+    <view class="Frame">
+      <view class="frameText">总用电量</view>
+      <view class="frameTexta">{{allList.nowRunTime}}</view>
+    </view>
+  </view>
+    <!-- <wux-button block type="light" bind:click="prompt">Prompt Dialog</wux-button> -->
+
+
+<view wx:if="{{type == 1}}">           
+<view class="all_switch">
+  <view class="line">
+    <span class="text">1路:</span>
+      <wux-switch name="balanced" slot="footer" color="balanced" value="{{ value1 }}" bind:change="onChange1" bindtap="modalinput1" class="switch"/>
+  </view>
+  <view class="line">
+    <span class="text">2路:</span>
+      <wux-switch name="balanced" slot="footer" color="balanced" value="{{ value2 }}" bind:change="onChange2" bindtap="modalinput2" class="switch"/>
+  </view>
+  <view class="line">
+    <span class="text">3路:</span>
+      <wux-switch name="balanced" slot="footer" color="balanced" value="{{ value3 }}" bind:change="onChange3" bindtap="modalinput3" class="switch"/>
+  </view>
+</view> 
+<view class="all_switch">
+  <view class="line">
+    <span class="text">4路:</span>
+      <wux-switch name="balanced" slot="footer" color="balanced" value="{{ value4 }}" bind:change="onChange4" bindtap="modalinput4" class="switch"/>
+  </view>
+  <view class="line">
+    <span class="text">5路:</span>
+      <wux-switch name="balanced" slot="footer" color="balanced" value="{{ value5 }}" bind:change="onChange5" bindtap="modalinput5" class="switch"/>
+  </view>
+</view> 
+
+<modal hidden="{{hiddenmodalput1}}" title="请输入1路登录密码" confirm-text="确定" cancel-text="取消" bindcancel="cancel1" bindconfirm="confirm1"> 
+ <input type='text' placeholder="请输入登录密码" auto-focus  value='{{ contents }}'       bindinput='changeContent' />
+</modal>
+
+ <modal hidden="{{hiddenmodalput2}}" title="请输入2路登录密码" confirm-text="确定" cancel-text="取消" bindcancel="cancel2" bindconfirm="confirm2"> 
+ <input type='text' placeholder="请输入登录密码" auto-focus  value='{{ contents }}'       bindinput='changeContent' />
+</modal>
+
+ <modal hidden="{{hiddenmodalput3}}" title="请输入3路登录密码" confirm-text="确定" cancel-text="取消" bindcancel="cancel3" bindconfirm="confirm3"> 
+ <input type='text' placeholder="请输入登录密码" auto-focus  value='{{ contents }}'       bindinput='changeContent' />
+</modal>
+
+ <modal hidden="{{hiddenmodalput4}}" title="请输入4路登录密码" confirm-text="确定" cancel-text="取消" bindcancel="cancel4" bindconfirm="confirm4"> 
+ <input type='text' placeholder="请输入登录密码" auto-focus  value='{{ contents }}'       bindinput='changeContent' />
+</modal>
+
+ <modal hidden="{{hiddenmodalput5}}" title="请输入5路登录密码" confirm-text="确定" cancel-text="取消" bindcancel="cancel5" bindconfirm="confirm5"> 
+ <input type='text' placeholder="请输入登录密码" auto-focus  value='{{ contents }}'       bindinput='changeContent' />
+</modal>
+  </view>
+
+
+<view wx:if="{{type == 2}}">           
+<view class="all_switch">
+  <view class="line">
+    <span class="text">1路:</span>
+      <wux-switch name="balanced" slot="footer" color="balanced" value="{{ value1 }}" bind:change="onChange1" bindtap="modalinput1" class="switch"/>
+  </view>
+  <view class="line">
+    <span class="text">2路:</span>
+      <wux-switch name="balanced" slot="footer" color="balanced" value="{{ value2 }}" bind:change="onChange2" bindtap="modalinput2" class="switch"/>
+  </view>
+  <view class="line">
+    <span class="text">3路:</span>
+      <wux-switch name="balanced" slot="footer" color="balanced" value="{{ value3 }}" bind:change="onChange3" bindtap="modalinput3" class="switch"/>
+  </view>
+</view> 
+<view class="all_switch">
+  <view class="line">
+    <span class="text">4路:</span>
+      <wux-switch name="balanced" slot="footer" color="balanced" value="{{ value4 }}" bind:change="onChange4" bindtap="modalinput4" class="switch"/>
+  </view>
+</view> 
+
+<modal hidden="{{hiddenmodalput1}}" title="请输入1路登录密码" confirm-text="确定" cancel-text="取消" bindcancel="cancel1" bindconfirm="confirm1"> 
+ <input type='text' placeholder="请输入登录密码" auto-focus  value='{{ contents }}'       bindinput='changeContent' />
+</modal>
+
+ <modal hidden="{{hiddenmodalput2}}" title="请输入2路登录密码" confirm-text="确定" cancel-text="取消" bindcancel="cancel2" bindconfirm="confirm2"> 
+ <input type='text' placeholder="请输入登录密码" auto-focus  value='{{ contents }}'       bindinput='changeContent' />
+</modal>
+
+ <modal hidden="{{hiddenmodalput3}}" title="请输入3路登录密码" confirm-text="确定" cancel-text="取消" bindcancel="cancel3" bindconfirm="confirm3"> 
+ <input type='text' placeholder="请输入登录密码" auto-focus  value='{{ contents }}'       bindinput='changeContent' />
+</modal>
+
+ <modal hidden="{{hiddenmodalput4}}" title="请输入4路登录密码" confirm-text="确定" cancel-text="取消" bindcancel="cancel4" bindconfirm="confirm4"> 
+ <input type='text' placeholder="请输入登录密码" auto-focus  value='{{ contents }}'       bindinput='changeContent' />
+</modal>
+
+  </view>
+
+
+<view wx:if="{{type == 4 || type == 5 || type == 6 || type == 7 || type == 8 || type == 9 || type == 10 || type == 11}}">           
+<view class="all_switch">
+  <view class="line">
+    <span class="text">1路:</span>
+      <wux-switch name="balanced" slot="footer" color="balanced" value="{{ value1 }}" bind:change="onChange1" bindtap="modalinput1" class="switch"/>
+  </view>
+  <view class="line">
+    <span class="text">2路:</span>
+      <wux-switch name="balanced" slot="footer" color="balanced" value="{{ value2 }}" bind:change="onChange2" bindtap="modalinput2" class="switch"/>
+  </view>
+  <view class="line">
+    <span class="text">3路:</span>
+      <wux-switch name="balanced" slot="footer" color="balanced" value="{{ value3 }}" bind:change="onChange3" bindtap="modalinput3" class="switch"/>
+  </view>
+</view> 
+<view class="all_switch">
+  <view class="line">
+    <span class="text">4路:</span>
+      <wux-switch name="balanced" slot="footer" color="balanced" value="{{ value4 }}" bind:change="onChange4" bindtap="modalinput4" class="switch"/>
+  </view>
+  <view class="line">
+    <span class="text">5路:</span>
+      <wux-switch name="balanced" slot="footer" color="balanced" value="{{ value5 }}" bind:change="onChange5" bindtap="modalinput5" class="switch"/>
+  </view>
+</view> 
+
+ <modal hidden="{{hiddenmodalput1}}" title="请输入1路登录密码" confirm-text="确定" cancel-text="取消" bindcancel="cancel1" bindconfirm="confirm1"> 
+ <input type='text' placeholder="请输入登录密码" auto-focus  value='{{ contents }}'       bindinput='changeContent' />
+</modal>
+
+ <modal hidden="{{hiddenmodalput2}}" title="请输入2路登录密码" confirm-text="确定" cancel-text="取消" bindcancel="cancel2" bindconfirm="confirm2"> 
+ <input type='text' placeholder="请输入登录密码" auto-focus  value='{{ contents }}'       bindinput='changeContent' />
+</modal>
+
+ <modal hidden="{{hiddenmodalput3}}" title="请输入3路登录密码" confirm-text="确定" cancel-text="取消" bindcancel="cancel3" bindconfirm="confirm3"> 
+ <input type='text' placeholder="请输入登录密码" auto-focus  value='{{ contents }}'       bindinput='changeContent' />
+</modal>
+
+ <modal hidden="{{hiddenmodalput4}}" title="请输入4路登录密码" confirm-text="确定" cancel-text="取消" bindcancel="cancel4" bindconfirm="confirm4"> 
+ <input type='text' placeholder="请输入登录密码" auto-focus  value='{{ contents }}'       bindinput='changeContent' />
+</modal>
+
+ <modal hidden="{{hiddenmodalput5}}" title="请输入5路登录密码" confirm-text="确定" cancel-text="取消" bindcancel="cancel5" bindconfirm="confirm5"> 
+ <input type='text' placeholder="请输入登录密码" auto-focus  value='{{ contents }}'       bindinput='changeContent' />
+</modal>
+  </view>
+
+  <view wx:if="{{type == 12}}">           
+<view class="all_switch">
+  <view class="line">
+    <span class="text">1路:</span>
+      <wux-switch name="balanced" slot="footer" color="balanced" value="{{ value1 }}" bind:change="onChange1" bindtap="modalinput1" class="switch"/>
+  </view>
+  <view class="line">
+    <span class="text">2路:</span>
+      <wux-switch name="balanced" slot="footer" color="balanced" value="{{ value2 }}" bind:change="onChange2" bindtap="modalinput2" class="switch"/>
+  </view>
+  <view class="line">
+    <span class="text">3路:</span>
+      <wux-switch name="balanced" slot="footer" color="balanced" value="{{ value3 }}" bind:change="onChange3" bindtap="modalinput3" class="switch"/>
+  </view>
+</view> 
+
+ <modal hidden="{{hiddenmodalput1}}" title="请输入1路登录密码" confirm-text="确定" cancel-text="取消" bindcancel="cancel1" bindconfirm="confirm1"> 
+ <input type='text' placeholder="请输入登录密码" auto-focus  value='{{ contents }}'       bindinput='changeContent' />
+</modal>
+
+ <modal hidden="{{hiddenmodalput2}}" title="请输入2路登录密码" confirm-text="确定" cancel-text="取消" bindcancel="cancel2" bindconfirm="confirm2"> 
+ <input type='text' placeholder="请输入登录密码" auto-focus  value='{{ contents }}'       bindinput='changeContent' />
+</modal>
+
+ <modal hidden="{{hiddenmodalput3}}" title="请输入3路登录密码" confirm-text="确定" cancel-text="取消" bindcancel="cancel3" bindconfirm="confirm3"> 
+ <input type='text' placeholder="请输入登录密码" auto-focus  value='{{ contents }}'       bindinput='changeContent' />
+</modal>
+
+  </view>
+
+   <view wx:if="{{type == 13}}">           
+<view class="all_switch">
+  <view class="line">
+    <span class="text">1路:</span>
+      <wux-switch name="balanced" slot="footer" color="balanced" value="{{ value1 }}" bind:change="onChange1" bindtap="modalinput1" class="switch"/>
+  </view>
+
+  <view class="line">
+    <span class="text">2路:</span>
+      <wux-switch name="balanced" slot="footer" color="balanced" value="{{ value2 }}" bind:change="onChange2" bindtap="modalinput2" class="switch"/>
+  </view>
+  <view class="line">
+    <span class="text">3路:</span>
+      <wux-switch name="balanced" slot="footer" color="balanced" value="{{ value3 }}" bind:change="onChange3" bindtap="modalinput3" class="switch"/>
+  </view>
+
+   <modal hidden="{{hiddenmodalput1}}" title="请输入1路登录密码" confirm-text="确定" cancel-text="取消" bindcancel="cancel1" bindconfirm="confirm1"> 
+ <input type='text' placeholder="请输入登录密码" auto-focus  value='{{ contents }}'       bindinput='changeContent' />
+</modal>
+
+ <modal hidden="{{hiddenmodalput2}}" title="请输入2路登录密码" confirm-text="确定" cancel-text="取消" bindcancel="cancel2" bindconfirm="confirm2"> 
+ <input type='text' placeholder="请输入登录密码" auto-focus  value='{{ contents }}'       bindinput='changeContent' />
+</modal>
+
+ <modal hidden="{{hiddenmodalput3}}" title="请输入3路登录密码" confirm-text="确定" cancel-text="取消" bindcancel="cancel3" bindconfirm="confirm3"> 
+ <input type='text' placeholder="请输入登录密码" auto-focus  value='{{ contents }}'       bindinput='changeContent' />
+</modal>
+
+</view> 
+
+  </view>
+
+   <view wx:if="{{type == 14}}">           
+<view class="all_switch">
+  <view class="line">
+
+    <span class="text">1路:</span>
+      <wux-switch name="balanced" slot="footer" color="balanced" value="{{ value1 }}" bind:change="onChange1" bindtap="modalinput1" class="switch"/>  
+      </view>
+  </view>
+
+  <modal hidden="{{hiddenmodalput1}}" title="请输入1路登录密码" confirm-text="确定" cancel-text="取消" bindcancel="cancel1" bindconfirm="confirm1"> 
+ <input type='text' placeholder="请输入登录密码" auto-focus  value='{{ contents }}'       bindinput='changeContent' />
+</modal>
+
+  </view>
+
+  
+
+
+  <!-- 详情列表 -->
+    <wux-row class="equipment_button" wx:if = "{{ state == 2 }}">
+      <wux-col style="margin-top: 100rpx;" span="6" wx:for="{{firstList}}">
+      <view style="border: #bfbfbf 1px solid;margin-bottom:20rpx;">
+        <view class="equipment_name">{{item.show_name}}
+          <text class="equipment_name_text">{{item.unit}}</text>
+        </view>
+        <view class="equipment_number">{{item.value}}</view>
+        </view>        
+      </wux-col>
+  </wux-row>
+
+   <wux-row class="equipment_button" wx:if = "{{ state == 1 }}">
+      <wux-col style="margin-top: 100rpx;" span="6" wx:for="{{firstList}}">
+      <view style="border: #bfbfbf 1px solid;margin-bottom:20rpx;">
+        <view class="equipment_name">{{item.show_name}}
+          <text class="equipment_name_text">{{item.unit}}</text>
+        </view>
+        <view class="equipment_number">{{item.value}}</view>
+        </view>        
+      </wux-col>
+  </wux-row>
+
+       
+ 
+
+  
+
+  <!-- <view class="buttom">
+    <button class="btn" bindtap="equipment_curve" data-Id='{{ ids }}'>设备曲线</button>
+    <button class="btn" bindtap="equipment_device" data-Id='{{ ids }}'>设备装置</button>
+  </view> -->
+
+<view class="page__bd">
+      <view class="weui-tabbar">
+          <view class="weui-tabbar__item weui-bar__item_on">
+              <view style="position: relative;display:inline-block;">
+                <image src="../images/pic_160.png" class="weui-tabbar__icon"></image>
+              </view>
+
+<view class="footer" >
+ <view class="wrap" bindtap="equipment_curve" data-Id='{{ ids }}'>
+  <image src="../../img/canshujin.png" style="margin: 0 auto;margin-top:5rpx;"/>
+  <view class="tabs" style="color:{{current===item.content?'#dabe7c':''}}">详情</view>
+    </view>
+
+    <view class="wrap" bindtap="equipment_curve" data-Id='{{ ids }}'>
+  <image src="../../img/quxianhui.png" style="margin: 0 auto;margin-top:5rpx;"/>
+  <view class="tabs" style="color:{{current===item.content?'#c1c1c1':''}}">曲线</view>
+    </view>
+
+        <view class="wrap"  bindtap="equipment_device" data-Id='{{ ids }}'>
+        <image src="../../img/zhuangzhi_grey.png" style="margin: 0 auto;margin-top:5rpx;"/>
+        <view class="tab" style="color:{{current===item.content?'#c1c1c1':''}};">日志</view>
+    </view>
+</view>
+
+
+  <!-- </view> -->
+             
+          </view>
+         
+      </view>
+    </view>
+
+</view>
+
+
+

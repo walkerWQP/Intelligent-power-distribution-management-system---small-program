@@ -1,0 +1,6 @@
+  <web-view 
+  src="https://dev.zzdelectric.com/admin/#/wx-curve?id={{equipment_id}}&village_id={{village_id}}"></web-view>
+
+  <!-- <web-view 
+src="http://114.115.221.203:8088/#/wx-curve?id={{equipment_id}}&village_id={{village_id}}"></web-view> -->
+

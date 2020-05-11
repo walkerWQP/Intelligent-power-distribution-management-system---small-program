@@ -1,0 +1,87 @@
+<!--pages/home/equipment_warning/equipment_warning.wxml-->
+<view class="page">
+
+  <!-- 报警标题 -->
+  <view class="warning_top">
+    <view class="warning_view"></view>
+    <view class="warning_text">报警信息</view>
+  </view>
+
+  <!-- 分割线 -->
+  <view class="dividing_line"></view>
+
+  <!-- 报警项 -->
+  <view class="warning_term">
+  
+    <view class="warning_term_view">报警内容:</view>
+    <view class="warning_term_text">{{show_name}}</view>
+  </view>
+
+  <!-- 分割线 -->
+  <view class="dividing_line1"></view>
+
+  <!-- 设备图片 -->
+  <view class="equipment_img">
+    <view class="equipment_text">设备图纸</view>
+    <block wx:for="{{equipmentImg}}">
+            <image class="equipment_imgs" src="{{ imgUrl + item }}" bindtap="previewImages" id="{{item}}"></image>
+    </block>
+    
+  </view>
+
+  <!-- 分割线 -->
+  <view class="dividing_line2"></view>
+
+  <!-- 报警标题 -->
+  <view class="warning_top">
+    <view class="warning_view"></view>
+    <view class="warning_text">现场记录</view>
+  </view>
+
+  <!-- 分割线 -->
+  <view class="dividing_line4"></view>
+
+  <!-- 解决方式 -->
+  <view class="solution">
+    <view class="solution_text">解决方式</view>
+    <view class="textarea-wrp">
+      <textarea style='width:99%;height:90%; margin-top: 10rpx;' placeholder="请输入解决方案" minlength="{{min}}" maxlength="{{max}}" bindinput="inputs"/>
+      <text class="record">{{record|0}}/{{max}}</text>
+    </view>
+  </view>
+
+  <!-- 分割线 -->
+  <view class="dividing_line5"></view>
+
+  <!-- 现场照片 -->
+  <view class="solution">
+    <view class="solution_text">现场照片</view>
+    <!-- <image class="equipment_imgs"></image> -->
+   
+   <view class="img">
+  <block wx:for="{{files}}" wx:key="*this">
+       <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}" data-index="{{index}}">
+      <image class="weui-uploader__img imgs" src="{{item}}" mode="aspectFill" />
+        </view>
+      <icon class="icons" bindtap="deleteImage" type="cancel" size="23"></icon>
+
+    </block>
+ <view class="weui-uploader__input-box" wx:if="{{imgLength == 0}}">
+         <view class="weui-uploader__input" bindtap="chooseImage"></view>
+  </view>
+   </view>
+  
+    
+  </view>
+
+  <!-- 保存 -->
+    <button class='bottomside' bindtap="enterButtonClick" >
+保存
+    </button>
+
+    
+
+  <!-- 分割线 -->
+  <view class="dividing_line6"></view>
+  
+</view>

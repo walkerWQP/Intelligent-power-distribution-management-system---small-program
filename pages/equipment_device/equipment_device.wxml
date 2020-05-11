@@ -1,0 +1,50 @@
+<!--pages/equipment_device/equipment_device.wxml-->
+
+ <view class="weui-tab__content content">
+   <block wx:for="{{firstList}}">
+    <view class="equipment">
+ <view class="equipmentName">日志类型：
+     <!-- <text class="equipmentText">{{item.logType}}</text> -->
+      <text class="equipmentText" wx:if='{{item.logType == 1}}'>开关机</text>
+      <text class="equipmentText" wx:if='{{item.logType == 2}}'>报警</text>
+      <text class="equipmentText" wx:if='{{item.logType == 3}}'>接入</text>
+      <text class="equipmentText" wx:if='{{item.logType == 4}}'>入网</text>
+</view>
+ <view class="equipmentName">日志详情：
+     <text class="equipmentText" wx:if='{{item.logDetail != null}}'>{{item.logDetail}}</text> 
+     <text class="equipmentText" wx:if='{{item.logDetail == null}}'>无</text>
+</view> 
+ <wxs module="m1">
+        function format(ts) {
+          var d = getDate(ts)
+          return [d.getFullYear(), d.getMonth() + 1, d.getDate()].join('-') +' ' + [d.getHours(), d.getMinutes(), d.getSeconds()].join(':')
+        }
+        module.exports.format = format
+      </wxs>
+ <view class="equipmentName">录入时间：
+     <text class="equipmentText">{{m1.format(item.addTime)}}</text>
+</view>
+    </view>
+                    </block>
+
+
+<view class="footer" >
+
+ <view class="wrap" bindtap="equipment_detail" data-Id='{{ ids }}'>
+  <image src="../../img/canshuhui.png" style="margin: 0 auto;margin-top:5rpx;"/>
+  <view class="tabs" style="color:{{current===item.content?'#c1c1c1':''}}">详情</view>
+    </view>
+
+  <view class="wrap"  bindtap="change" bindtap="equipment_curve" data-Id='{{ ids }}'>
+    <image src="../../img/quxianhui.png" style="margin: 0 auto;margin-top:5rpx;"/>
+        <view class="tabs" style="color:{{current===item.content?'#c1c1c1':''}}">曲线</view>
+    </view>
+
+ <view class="wrap"  bindtap="change" bindtap="equipment_device" data-Id='{{ ids }}'>
+  <image src="../../img/zhuangzhijin.png" style="margin: 0 auto;margin-top:5rpx;"/>
+  <view class="tab" style="color:{{current===item.content?'#dabe7c':''}};">日志</view>
+    </view>
+</view>
+<view wx:if="{{ nomore == 1 }}" class="nomore">没有更多了</view>
+
+   </view>

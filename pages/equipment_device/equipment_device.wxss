@@ -1,0 +1,72 @@
+/* pages/equipment_device/equipment_device.wxss */
+.content{
+  margin-bottom: 150rpx;
+}
+.equipment{
+  height: 300rpx;
+  background: #FFFFFF;
+  margin-top: 25rpx;
+  border-radius: 20rpx;
+  line-height: 1.0;
+}
+
+.equipmentName{
+  margin-left: 32rpx;
+  padding-top: 25rpx;
+  line-height: 50rpx;
+  height: 64rpx;
+  font-size: 32rpx;
+  /* font-family: PingFangTC-Medium; */
+  color: #1f2023;
+  display: flex;
+  flex-direction: row;
+
+}
+
+
+.footer{
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0rpx;
+    left: 0rpx;
+    width: 750rpx;
+    height: 120rpx;
+    border-top: 1px solid #ccc;
+      background-color: #fff;
+
+}
+.wrap{
+    width: 150rpx;
+    height: 150rpx;
+}
+.wrap image{
+    display: block;
+    width: 70rpx;
+    height: 70rpx;
+    /* margin-top: 10rpx; */
+    margin-bottom: 0rpx;
+}
+.wrap .tab{
+    /* margin-left: 45rpx;  */
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+    margin-top:5rpx;
+
+}
+.wrap .tabs{
+    /* margin-left: 45rpx;  */
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+    margin-top:5rpx
+
+}
+.nomore{
+font-family: PingFangSC-Regular;
+font-size: 30rpx;
+color: #717171;
+margin-top: 40rpx;
+text-align: center;
+}
